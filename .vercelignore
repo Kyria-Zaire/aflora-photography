@@ -26,10 +26,10 @@ deploy.bat
 backup-old-site/
 run/
 
-# Fichiers de configuration de développement
+# Fichiers de configuration de développement (GARDER les tsconfig)
 .eslintrc.*
 .prettierrc.*
-tsconfig.*.json
+# tsconfig.*.json  ← SUPPRIMÉ pour permettre le build
 vite.config.ts
 tailwind.config.js
 postcss.config.js
