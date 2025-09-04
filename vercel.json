@@ -25,12 +25,10 @@
     {
       "source": "/icon-512.png",
       "destination": "/icon-512.png"
-    }
-  ],
-  "routes": [
+    },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
