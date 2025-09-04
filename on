@@ -1,0 +1,3 @@
+[33mce29a8d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix all missing images - 109 images now included in build
+[33m16f3062[m Fix missing images - add script to copy all images after build
+[33m72a1145[m Fix SPA routing - add routes for Vue.js navigation
