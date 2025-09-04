@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+/* Custom CSS Variables */
+:root {
+  --color-primary: #eab308;
+  --color-primary-dark: #ca8a04;
+  --color-secondary: #0f172a;
+  --color-accent: #fef08a;
+  --color-text: #1e293b;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+  --color-background: #ffffff;
+  --color-background-dark: #0f172a;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #0f172a;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.display-text {
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+
+/* Enhanced text contrast with better readability */
+.text-gray-600 {
+  color: #374151 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+
+.text-gray-300 {
+  color: #d1d5db !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+
+/* New high-contrast text classes for better readability */
+.text-high-contrast {
+  color: #1e293b !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.text-high-contrast-light {
+  color: #374151 !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  font-weight: 400;
+}
+
+.text-high-contrast-dark {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.text-high-contrast-dark-light {
+  color: #e2e8f0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+/* Specific text colors for different backgrounds */
+.text-on-light {
+  color: #1e293b !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.text-on-dark {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.text-on-luxury {
+  color: #0f172a !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-on-glass {
+  color: #1e293b !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+.text-on-glass-dark {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+/* Luxury Effects with enhanced backgrounds */
+.luxury-gradient {
+  background: linear-gradient(135deg, #eab308 0%, #fef08a 50%, #eab308 100%);
+}
+
+.luxury-gradient-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+/* Enhanced glass effects with better contrast */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #0f172a;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect-dark {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  color: #f8fafc;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* New sophisticated background patterns */
+.bg-pattern-luxury {
+  background: 
+    linear-gradient(135deg, rgba(234, 179, 8, 0.05) 0%, rgba(254, 240, 138, 0.05) 100%),
+    radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(254, 240, 138, 0.1) 0%, transparent 50%);
+}
+
+.bg-pattern-dark {
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
+    radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(254, 240, 138, 0.05) 0%, transparent 50%);
+}
+
+.bg-pattern-light {
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(249, 250, 251, 1) 100%),
+    radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(254, 240, 138, 0.03) 0%, transparent 50%);
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Custom Components with enhanced styling */
+@layer components {
+  .btn-luxury {
+    @apply px-8 py-4 bg-luxury-500 text-white font-semibold rounded-none border-2 border-luxury-500 transition-all duration-300 hover:bg-transparent hover:text-luxury-500 hover:border-luxury-500 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-luxury-outline {
+    @apply px-8 py-4 bg-transparent text-luxury-500 font-semibold rounded-none border-2 border-luxury-500 transition-all duration-300 hover:bg-luxury-500 hover:text-white transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+
+  .card-luxury {
+    @apply bg-white border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-pattern-light;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-luxury-500 transition-colors duration-300 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-luxury-500 border-b-2 border-luxury-500;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 focus:border-luxury-500 focus:ring-2 focus:ring-luxury-500 focus:ring-opacity-50 transition-all duration-300 bg-white text-gray-900 shadow-sm;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 focus:border-luxury-500 focus:ring-2 focus:ring-luxury-500 focus:ring-opacity-50 transition-all duration-300 bg-white text-gray-900 resize-none shadow-sm;
+  }
+
+  /* Enhanced text readability with better contrast */
+  .text-readable {
+    color: #1e293b;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    font-weight: 500;
+  }
+
+  .text-readable-light {
+    color: #374151;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    font-weight: 400;
+  }
+
+  .text-readable-dark {
+    color: #f8fafc;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+  }
+
+  .text-readable-dark-light {
+    color: #e2e8f0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+  }
+
+  /* New text styles for better hierarchy */
+  .text-emphasis {
+    color: #0f172a;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+  }
+
+  .text-subtle {
+    color: #475569;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    font-weight: 400;
+  }
+
+  .text-accent {
+    color: #eab308;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+  }
+}
+
+/* Hero Section with enhanced background */
+.hero-bg {
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%),
+    radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(254, 240, 138, 0.05) 0%, transparent 50%),
+    url('/images/hero-bg.jpg');
+  background-size: cover, cover, cover, cover;
+  background-position: center, center, center, center;
+  background-attachment: fixed, fixed, fixed, fixed;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-padding {
+    @apply py-12 px-4;
+  }
+  
+  .hero-bg {
+    background-attachment: scroll, scroll, scroll, scroll;
+  }
+}
+
+/* Dark Mode Support with enhanced contrast */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f1f5f9;
+    --color-text-light: #cbd5e1;
+    --color-background: #0f172a;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  
+  .card-luxury {
+    @apply bg-dark-800 border-dark-700 bg-pattern-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f8fafc;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-gray-600 {
+    color: #cbd5e1 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-gray-500 {
+    color: #94a3b8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-gray-400 {
+    color: #64748b !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-gray-300 {
+    color: #475569 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+

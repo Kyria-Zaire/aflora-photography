@@ -1,0 +1,1030 @@
+/* ===================================
+   AFLORA - DESIGN ULTRA LUXE
+   Niveau des plus grandes marques premium
+   =================================== */
+
+/* ===================================
+   VARIABLES CSS LUXE
+   =================================== */
+:root {
+    /* Palette de couleurs LUXE */
+    --luxe-black: #0a0a0a;
+    --luxe-dark: #1a1a1a;
+    --luxe-gold: #D4AF37;
+    --luxe-gold-light: #FFD700;
+    --luxe-gold-dark: #B8860B;
+    --luxe-platinum: #E5E4E2;
+    --luxe-silver: #C0C0C0;
+    --luxe-white: #ffffff;
+    --luxe-gray: #8a8a8a;
+    --luxe-gray-dark: #4a4a4a;
+    
+    /* Gradients LUXE */
+    --gradient-luxe-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #D4AF37 100%);
+    --gradient-luxe-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2d2d2d 50%, #1a1a1a 75%, #0a0a0a 100%);
+    --gradient-luxe-hero: linear-gradient(135deg, #000000 0%, #1a1a1a 20%, #2d2d2d 40%, #1a1a1a 60%, #000000 80%, #0a0a0a 100%);
+    --gradient-luxe-card: linear-gradient(145deg, rgba(26, 26, 26, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+    
+    /* Ombres LUXE */
+    --shadow-luxe-gold: 0 20px 40px rgba(212, 175, 55, 0.4);
+    --shadow-luxe-dark: 0 25px 50px rgba(0, 0, 0, 0.6);
+    --shadow-luxe-card: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --shadow-luxe-text: 0 10px 30px rgba(0, 0, 0, 0.8);
+    
+    /* Animations LUXE */
+    --transition-luxe: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-luxe-fast: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-luxe-bounce: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Effets LUXE */
+    --blur-luxe: blur(30px);
+    --border-luxe: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* ===================================
+   RESET & BASE LUXE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--luxe-black);
+    color: var(--luxe-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+/* ===================================
+   LAYOUT UTILITIES LUXE
+   =================================== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.py-5 {
+    padding: 5rem 0;
+}
+
+/* ===================================
+   TYPOGRAPHY & LISTS LUXE
+   =================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--luxe-gold);
+    font-weight: bold;
+}
+
+.service-card-luxe ul li,
+.price-card-luxe ul li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--luxe-gray);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links .btn-luxe-secondary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   TYPOGRAPHY LUXE
+   =================================== */
+.font-playfair { 
+    font-family: 'Playfair Display', serif; 
+    font-weight: 400;
+}
+
+.font-inter { 
+    font-family: 'Inter', sans-serif; 
+}
+
+.gradient-text-luxe {
+    background: var(--gradient-luxe-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 300% 300%;
+    animation: gradientLuxeShift 4s ease-in-out infinite;
+    position: relative;
+}
+
+.gradient-text-luxe::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: var(--gradient-luxe-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: blur(8px);
+    opacity: 0.5;
+}
+
+@keyframes gradientLuxeShift {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+}
+
+.hero-title-luxe {
+    font-size: clamp(4rem, 10vw, 10rem);
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    text-shadow: var(--shadow-luxe-text);
+    position: relative;
+}
+
+.hero-title-luxe::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: var(--gradient-luxe-gold);
+    opacity: 0.1;
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.section-title-luxe {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title-luxe::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-luxe-gold);
+    border-radius: 2px;
+}
+
+.subtitle-luxe {
+    font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+    color: var(--luxe-gray);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+/* ===================================
+   NAVIGATION LUXE
+   =================================== */
+.navbar-luxe {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: var(--blur-luxe);
+    border-bottom: var(--border-luxe);
+    transition: var(--transition-luxe);
+    padding: 1rem 0;
+}
+
+.navbar-luxe.scrolled {
+    background: rgba(10, 10, 10, 0.98);
+    box-shadow: var(--shadow-luxe-dark);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand-luxe {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: var(--gradient-luxe-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-brand-luxe::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-luxe-gold);
+    transform: scaleX(0);
+    transition: var(--transition-luxe);
+}
+
+.navbar-brand-luxe:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link-luxe {
+    position: relative;
+    font-weight: 400;
+    font-size: 1.1rem;
+    transition: var(--transition-luxe);
+    padding: 0.8rem 1.5rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--luxe-white);
+}
+
+.nav-link-luxe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-luxe-gold);
+    opacity: 0;
+    transition: var(--transition-luxe);
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.nav-link-luxe::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-luxe-gold);
+    transition: var(--transition-luxe);
+    transform: translateX(-50%);
+}
+
+.nav-link-luxe:hover::before {
+    opacity: 0.1;
+}
+
+.nav-link-luxe:hover::after,
+.nav-link-luxe.active::after {
+    width: 80%;
+}
+
+.nav-link-luxe:hover {
+    color: var(--luxe-gold);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   HERO SECTION LUXE
+   =================================== */
+.hero-section-luxe {
+    min-height: 100vh;
+    background: var(--gradient-luxe-hero);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-section-luxe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    animation: luxeFloat 20s ease-in-out infinite;
+}
+
+@keyframes luxeFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-10px, -10px) rotate(1deg); }
+    50% { transform: translate(10px, -5px) rotate(-1deg); }
+    75% { transform: translate(-5px, 10px) rotate(0.5deg); }
+}
+
+.hero-content-luxe {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+.hero-subtitle-luxe {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--luxe-gold);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hero-subtitle-luxe::before,
+.hero-subtitle-luxe::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: var(--gradient-luxe-gold);
+    transform: translateY(-50%);
+}
+
+.hero-subtitle-luxe::before {
+    left: -80px;
+}
+
+.hero-subtitle-luxe::after {
+    right: -80px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+/* ===================================
+   BUTTONS LUXE
+   =================================== */
+.btn-luxe-primary {
+    background: var(--gradient-luxe-gold);
+    color: var(--luxe-black);
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition-luxe-bounce);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-luxe-gold);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-luxe-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: var(--transition-luxe);
+}
+
+.btn-luxe-primary:hover::before {
+    left: 100%;
+}
+
+.btn-luxe-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.5);
+}
+
+.btn-luxe-secondary {
+    background: transparent;
+    color: var(--luxe-gold);
+    border: 2px solid var(--luxe-gold);
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: var(--transition-luxe-bounce);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-luxe-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-luxe-gold);
+    transition: var(--transition-luxe);
+    z-index: -1;
+}
+
+.btn-luxe-secondary:hover::before {
+    left: 0;
+}
+
+.btn-luxe-secondary:hover {
+    color: var(--luxe-black);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--shadow-luxe-gold);
+}
+
+/* ===================================
+   CARDS LUXE
+   =================================== */
+.card-luxe {
+    background: var(--gradient-luxe-card);
+    backdrop-filter: var(--blur-luxe);
+    border: var(--border-luxe);
+    border-radius: 25px;
+    padding: 3rem;
+    transition: var(--transition-luxe);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-luxe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-luxe-gold);
+    transform: scaleX(0);
+    transition: var(--transition-luxe);
+}
+
+.card-luxe::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: var(--transition-luxe);
+    opacity: 0;
+}
+
+.card-luxe:hover::before {
+    transform: scaleX(1);
+}
+
+.card-luxe:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
+}
+
+.card-luxe:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-luxe-card);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* ===================================
+   PORTFOLIO GALLERY LUXE
+   =================================== */
+.portfolio-grid-luxe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.portfolio-item-luxe {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: var(--transition-luxe);
+    cursor: pointer;
+    aspect-ratio: 4/5;
+}
+
+.portfolio-item-luxe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-luxe-gold);
+    opacity: 0;
+    transition: var(--transition-luxe);
+    z-index: 1;
+}
+
+.portfolio-item-luxe:hover::before {
+    opacity: 0.15;
+}
+
+.portfolio-item-luxe:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: var(--shadow-luxe-gold);
+}
+
+.portfolio-image-luxe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-luxe);
+}
+
+.portfolio-item-luxe:hover .portfolio-image-luxe {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay-luxe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 3rem 2rem 2rem;
+    transform: translateY(100%);
+    transition: var(--transition-luxe);
+    z-index: 2;
+}
+
+.portfolio-item-luxe:hover .portfolio-overlay-luxe {
+    transform: translateY(0);
+}
+
+/* ===================================
+   FILTER BUTTONS LUXE
+   =================================== */
+.filter-container-luxe {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn-luxe {
+    background: transparent;
+    color: var(--luxe-gray);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition-luxe);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.05em;
+}
+
+.filter-btn-luxe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-luxe-gold);
+    transition: var(--transition-luxe);
+    z-index: -1;
+}
+
+.filter-btn-luxe:hover::before,
+.filter-btn-luxe.active::before {
+    left: 0;
+}
+
+.filter-btn-luxe:hover,
+.filter-btn-luxe.active {
+    color: var(--luxe-black);
+    border-color: var(--luxe-gold);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-luxe-gold);
+}
+
+/* ===================================
+   SERVICES SECTION LUXE
+   =================================== */
+.services-grid-luxe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.service-card-luxe {
+    background: var(--gradient-luxe-card);
+    backdrop-filter: var(--blur-luxe);
+    border: var(--border-luxe);
+    border-radius: 25px;
+    padding: 3rem;
+    text-align: center;
+    transition: var(--transition-luxe);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-luxe::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: var(--transition-luxe);
+    opacity: 0;
+}
+
+.service-card-luxe:hover::before {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
+}
+
+.service-card-luxe:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-luxe-card);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.service-icon-luxe {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-luxe-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 2.5rem;
+    transition: var(--transition-luxe);
+    box-shadow: var(--shadow-luxe-gold);
+}
+
+.service-card-luxe:hover .service-icon-luxe {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* ===================================
+   PRICING SECTION LUXE
+   =================================== */
+.pricing-grid-luxe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.price-card-luxe {
+    background: var(--gradient-luxe-card);
+    backdrop-filter: var(--blur-luxe);
+    border: var(--border-luxe);
+    border-radius: 25px;
+    padding: 3rem;
+    text-align: center;
+    transition: var(--transition-luxe);
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card-luxe.featured {
+    background: var(--gradient-luxe-gold);
+    color: var(--luxe-black);
+    transform: scale(1.05);
+}
+
+.price-card-luxe.featured::before {
+    content: 'POPULAIRE';
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: var(--luxe-black);
+    color: var(--luxe-gold);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.price-card-luxe:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-luxe-card);
+}
+
+.price-amount-luxe {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 1.5rem 0;
+    background: var(--gradient-luxe-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.featured .price-amount-luxe {
+    color: var(--luxe-black);
+    -webkit-text-fill-color: var(--luxe-black);
+}
+
+/* ===================================
+   CONTACT FORM LUXE
+   =================================== */
+.contact-form-luxe {
+    background: var(--gradient-luxe-card);
+    backdrop-filter: var(--blur-luxe);
+    border: var(--border-luxe);
+    border-radius: 25px;
+    padding: 3rem;
+}
+
+.form-group-luxe {
+    margin-bottom: 2rem;
+}
+
+.form-input-luxe {
+    width: 100%;
+    background: rgba(10, 10, 10, 0.6);
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    padding: 1.2rem;
+    color: var(--luxe-white);
+    font-size: 1rem;
+    transition: var(--transition-luxe);
+    backdrop-filter: blur(10px);
+}
+
+.form-input-luxe:focus {
+    outline: none;
+    border-color: var(--luxe-gold);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    background: rgba(10, 10, 10, 0.8);
+    transform: translateY(-2px);
+}
+
+.form-label-luxe {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--luxe-gray);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+/* ===================================
+   WHATSAPP FLOAT LUXE
+   =================================== */
+.whatsapp-float-luxe {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25D366;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: var(--shadow-luxe-gold);
+    transition: var(--transition-luxe-bounce);
+    z-index: 1000;
+    animation: luxePulse 3s infinite;
+    text-decoration: none;
+}
+
+.whatsapp-float-luxe:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 40px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes luxePulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 25px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN LUXE
+   =================================== */
+@media (max-width: 768px) {
+    .hero-title-luxe {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+    
+    .section-title-luxe {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    
+    .portfolio-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pricing-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .filter-container-luxe {
+        gap: 1rem;
+    }
+    
+    .filter-btn-luxe {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-luxe {
+        padding: 0 1rem;
+    }
+    
+    .btn-luxe-primary,
+    .btn-luxe-secondary {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .card-luxe {
+        padding: 2rem;
+    }
+    
+    .service-card-luxe {
+        padding: 2.5rem;
+    }
+    
+    .price-card-luxe {
+        padding: 2.5rem;
+    }
+    
+    .portfolio-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .services-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pricing-grid-luxe {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ===================================
+   SCROLLBAR LUXE
+   =================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--luxe-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-luxe-gold);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--luxe-gold-light);
+}
+
+/* ===================================
+   UTILITY CLASSES LUXE
+   =================================== */
+.text-luxe-gold { color: var(--luxe-gold); }
+.bg-luxe-gold { background: var(--luxe-gold); }
+.border-luxe-gold { border-color: var(--luxe-gold); }
+.shadow-luxe-gold { box-shadow: var(--shadow-luxe-gold); }
+
+.glass-effect-luxe {
+    background: var(--gradient-luxe-card);
+    backdrop-filter: var(--blur-luxe);
+    border: var(--border-luxe);
+}
+
+.text-gradient-luxe {
+    background: var(--gradient-luxe-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+} 

@@ -1,0 +1,101 @@
+# ===================================
+# AFLORA - .gitignore
+# Fichiers à exclure du versioning
+# ===================================
+
+# ===================================
+# SYSTÈME D'EXPLOITATION
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================
+# ÉDITEURS DE CODE
+# ===================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===================================
+# LOGS
+# ===================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# DEPENDANCES
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================================
+# FICHIERS TEMPORAIRES
+# ===================================
+*.tmp
+*.temp
+.cache/
+
+# ===================================
+# FICHIERS DE CONFIGURATION SENSIBLES
+# ===================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===================================
+# FICHIERS DE BUILD
+# ===================================
+dist/
+build/
+out/
+
+# ===================================
+# FICHIERS DE SAUVEGARDE
+# ===================================
+*.bak
+*.backup
+*.old
+
+# ===================================
+# FICHIERS DE DONNÉES
+# ===================================
+*.sql
+*.db
+*.sqlite
+
+# ===================================
+# FICHIERS DE COMPRESSION
+# ===================================
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# ===================================
+# FICHIERS DE DOCUMENTATION TEMPORAIRE
+# ===================================
+*.draft
+*.work-in-progress
+
+# ===================================
+# FICHIERS SPÉCIFIQUES AU PROJET
+# ===================================
+# Images de test (à remplacer par les vraies)
+assets/images/test/
+assets/images/placeholder/
+
+# Fichiers de configuration personnalisés
+config.local.js 

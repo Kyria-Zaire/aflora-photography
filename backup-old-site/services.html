@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Tarifs - AFLORA Photographe Kinshasa</title>
+    <meta name="description" content="Découvrez les services et tarifs d'AFLORA, photographe professionnel à Kinshasa. Mariage, grossesse, mode, portrait et événementiel.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gold-border {
+            border: 2px solid #D4AF37;
+        }
+        
+        .hover-gold:hover {
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .price-card {
+            transition: all 0.3s ease;
+        }
+        
+        .price-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-playfair text-2xl font-bold gradient-text">
+                        AFLORA
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="hover-gold px-3 py-2 text-sm font-medium">Accueil</a>
+                        <a href="portfolio.html" class="hover-gold px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="services.html" class="text-yellow-400 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="contact.html" class="hover-gold px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20un%20shooting..." 
+                       class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300">
+                        Réserver
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-yellow-400">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium hover-gold">Accueil</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-base font-medium hover-gold">Portfolio</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-yellow-400">Services</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium hover-gold">Contact</a>
+                <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20un%20shooting..." 
+                   class="block mx-3 mt-4 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black px-6 py-3 rounded-full font-semibold text-center">
+                    Réserver
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+                Services & <span class="gradient-text">Tarifs</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Des forfaits adaptés à tous vos besoins. Chaque service inclut retouche professionnelle 
+                et livraison en 48h pour des résultats exceptionnels.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card text-center p-8 rounded-lg bg-gray-800 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-black text-3xl">💒</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-4">Mariage</h3>
+                    <p class="text-gray-400 mb-4">Cérémonie complète, réception, et moments intimes</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• Cérémonie religieuse</li>
+                        <li>• Réception</li>
+                        <li>• Photos de couple</li>
+                        <li>• Album premium</li>
+                    </ul>
+                </div>
+
+                <div class="service-card text-center p-8 rounded-lg bg-gray-800 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-black text-3xl">🤱</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-4">Grossesse</h3>
+                    <p class="text-gray-400 mb-4">Immortaliser la beauté de l'attente</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• Shooting en studio</li>
+                        <li>• Extérieur possible</li>
+                        <li>• Couple inclus</li>
+                        <li>• 20 photos retouchées</li>
+                    </ul>
+                </div>
+
+                <div class="service-card text-center p-8 rounded-lg bg-gray-800 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-black text-3xl">👗</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-4">Mode</h3>
+                    <p class="text-gray-400 mb-4">Shootings créatifs et stylés</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• Lookbook</li>
+                        <li>• Photos produit</li>
+                        <li>• Création artistique</li>
+                        <li>• 15 photos retouchées</li>
+                    </ul>
+                </div>
+
+                <div class="service-card text-center p-8 rounded-lg bg-gray-800 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-black text-3xl">📸</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-4">Portrait</h3>
+                    <p class="text-gray-400 mb-4">Révéler votre personnalité unique</p>
+                    <ul class="text-sm text-gray-300 space-y-2">
+                        <li>• Corporate</li>
+                        <li>• Artistique</li>
+                        <li>• Famille</li>
+                        <li>• 10 photos retouchées</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-playfair text-4xl font-bold mb-4">
+                    Nos <span class="gradient-text">Forfaits</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Des tarifs transparents et adaptés à tous les budgets
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Package -->
+                <div class="price-card bg-gray-900 rounded-lg p-8 border border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Essentiel</h3>
+                        <div class="text-4xl font-bold gradient-text mb-2">$150</div>
+                        <p class="text-gray-400">Par session</p>
+                    </div>
+                    
+                    <ul class="feature-list space-y-4 mb-8">
+                        <li>2h de shooting</li>
+                        <li>10 photos retouchées</li>
+                        <li>Livraison en 48h</li>
+                        <li>Conseils vestimentaires</li>
+                        <li>1 tenue incluse</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20le%20forfait%20Essentiel%20(%24150)..." 
+                       class="w-full block text-center bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300">
+                        Réserver
+                    </a>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="price-card bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-8 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-black text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold">POPULAIRE</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-black">Premium</h3>
+                        <div class="text-4xl font-bold text-black mb-2">$300</div>
+                        <p class="text-black/70">Par session</p>
+                    </div>
+                    
+                    <ul class="feature-list space-y-4 mb-8 text-black">
+                        <li>4h de shooting</li>
+                        <li>25 photos retouchées</li>
+                        <li>Livraison en 48h</li>
+                        <li>Conseils vestimentaires</li>
+                        <li>3 tenues incluses</li>
+                        <li>Album numérique</li>
+                        <li>Photos en haute résolution</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20le%20forfait%20Premium%20(%24300)..." 
+                       class="w-full block text-center bg-black text-yellow-400 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300">
+                        Réserver
+                    </a>
+                </div>
+
+                <!-- Luxury Package -->
+                <div class="price-card bg-gray-900 rounded-lg p-8 border border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Luxe</h3>
+                        <div class="text-4xl font-bold gradient-text mb-2">$500</div>
+                        <p class="text-gray-400">Par session</p>
+                    </div>
+                    
+                    <ul class="feature-list space-y-4 mb-8">
+                        <li>6h de shooting</li>
+                        <li>50 photos retouchées</li>
+                        <li>Livraison en 48h</li>
+                        <li>Conseils vestimentaires</li>
+                        <li>5 tenues incluses</li>
+                        <li>Album physique premium</li>
+                        <li>Photos en haute résolution</li>
+                        <li>Retouche avancée</li>
+                        <li>Support prioritaire</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20le%20forfait%20Luxe%20(%24500)..." 
+                       class="w-full block text-center bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300">
+                        Réserver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Services -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-playfair text-4xl font-bold mb-4">
+                    Services <span class="gradient-text">Spéciaux</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Des prestations sur-mesure pour vos événements exceptionnels
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Mariage -->
+                <div class="bg-gray-800 rounded-lg p-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-6">Mariage Complet</h3>
+                    <div class="text-3xl font-bold gradient-text mb-4">$800</div>
+                    <p class="text-gray-400 mb-6">
+                        Votre jour J immortalisé de A à Z avec professionnalisme et passion
+                    </p>
+                    <ul class="feature-list space-y-3 mb-8">
+                        <li>Préparation de la mariée</li>
+                        <li>Cérémonie religieuse</li>
+                        <li>Réception complète</li>
+                        <li>Photos de couple</li>
+                        <li>100 photos retouchées</li>
+                        <li>Album premium physique</li>
+                        <li>Livraison en 72h</li>
+                        <li>Support prioritaire 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20le%20service%20Mariage%20Complet%20(%24800)..." 
+                       class="inline-block bg-gradient-to-r from-yellow-600 to-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300">
+                        Réserver mon mariage
+                    </a>
+                </div>
+
+                <!-- Événementiel -->
+                <div class="bg-gray-800 rounded-lg p-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Événementiel</h3>
+                    <div class="text-3xl font-bold gradient-text mb-4">Sur devis</div>
+                    <p class="text-gray-400 mb-6">
+                        Couverture complète de vos événements professionnels et privés
+                    </p>
+                    <ul class="feature-list space-y-3 mb-8">
+                        <li>Lancements de produits</li>
+                        <li>Conférences et séminaires</li>
+                        <li>Anniversaires et fêtes</li>
+                        <li>Événements corporatifs</li>
+                        <li>Photos en temps réel</li>
+                        <li>Retouche professionnelle</li>
+                        <li>Livraison rapide</li>
+                        <li>Support dédié</li>
+                    </ul>
+                    <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20un%20devis%20pour%20un%20événement..." 
+                       class="inline-block gold-border text-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                        Demander un devis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-playfair text-4xl font-bold mb-4">
+                    Comment ça <span class="gradient-text">fonctionne</span>
+                </h2>
+                <p class="text-gray-400 text-lg">
+                    Un processus simple et efficace pour des résultats exceptionnels
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-black text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Réservation</h3>
+                    <p class="text-gray-400">Contactez-moi via WhatsApp pour réserver votre créneau</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-black text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Consultation</h3>
+                    <p class="text-gray-400">Discussion de vos besoins et conseils personnalisés</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-black text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Shooting</h3>
+                    <p class="text-gray-400">Séance photo dans une ambiance détendue et professionnelle</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-black text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Livraison</h3>
+                    <p class="text-gray-400">Photos retouchées livrées en 48h maximum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-playfair text-4xl font-bold mb-6" data-aos="fade-up">
+                Prêt à créer vos <span class="gradient-text">souvenirs</span> ?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
+                Réservez maintenant et bénéficiez d'un service premium personnalisé
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20un%20shooting..." 
+                   class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300">
+                    Réserver maintenant
+                </a>
+                <a href="contact.html" class="gold-border text-yellow-400 px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    Me contacter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/243000000000?text=Bonjour%20AFLORA%2C%20j%27aimerais%20réserver%20un%20shooting..." 
+           class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="font-playfair text-3xl font-bold gradient-text mb-4">
+                    AFLORA
+                </div>
+                <p class="text-gray-400 mb-6">
+                    L'émotion à l'instant juste
+                </p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2024 AFLORA. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
