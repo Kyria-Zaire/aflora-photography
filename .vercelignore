@@ -1,0 +1,38 @@
+# Fichiers de développement
+node_modules/
+.env.local
+.env.development
+.env.test
+
+# Fichiers de test
+cypress/
+e2e/
+__tests__/
+*.spec.ts
+*.test.ts
+
+# Fichiers de build temporaires
+.vite/
+.temp/
+.tmp/
+
+# Fichiers de documentation
+README.md
+DEPLOYMENT.md
+RESUME-DEPLOIEMENT.md
+deploy.bat
+
+# Fichiers de sauvegarde
+backup-old-site/
+run/
+
+# Fichiers de configuration de développement
+.eslintrc.*
+.prettierrc.*
+tsconfig.*.json
+vite.config.ts
+tailwind.config.js
+postcss.config.js
+
+# Fichiers de test d'images
+test-images.html

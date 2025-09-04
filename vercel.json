@@ -27,6 +27,18 @@
       "destination": "/icon-512.png"
     },
     {
+      "source": "/sw.js",
+      "destination": "/sw.js"
+    },
+    {
+      "source": "/workbox-*.js",
+      "destination": "/workbox-*.js"
+    },
+    {
+      "source": "/registerSW.js",
+      "destination": "/registerSW.js"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -58,5 +70,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "app/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }

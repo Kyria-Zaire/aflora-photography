@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Images AFLORA</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .image-test img { max-width: 200px; height: auto; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Test des Images AFLORA</h1>
+    
+    <div class="image-test">
+        <h3>Test Image 1 (Header Camera)</h3>
+        <img src="dist/assets/images/pexels-tirachard-kumtanom-112571-733853.jpg" 
+             alt="Header Camera" 
+             onload="this.parentElement.innerHTML += '<p class=\"success\">✅ Image chargée avec succès</p>'"
+             onerror="this.parentElement.innerHTML += '<p class=\"error\">❌ Erreur de chargement</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>Test Image 2</h3>
+        <img src="dist/assets/images/pexels-brett-sayles-2445781.jpg" 
+             alt="Test Image 2" 
+             onload="this.parentElement.innerHTML += '<p class=\"success\">✅ Image chargée avec succès</p>'"
+             onerror="this.parentElement.innerHTML += '<p class=\"error\">❌ Erreur de chargement</p>'">
+    </div>
+    
+    <div class="image-test">
+        <h3>Test Image 3</h3>
+        <img src="dist/assets/images2/pexels-ante-emmanuel-3691197-31466155.jpg" 
+             alt="Test Image 3" 
+             onload="this.parentElement.innerHTML += '<p class=\"success\">✅ Image chargée avec succès</p>'"
+             onerror="this.parentElement.innerHTML += '<p class=\"error\">❌ Erreur de chargement</p>'">
+    </div>
+    
+    <script>
+        console.log('Test des images en cours...');
+        
+        // Vérifier si le dossier dist existe
+        fetch('dist/assets/images/')
+            .then(response => {
+                if (response.ok) {
+                    console.log('✅ Dossier dist/assets/images accessible');
+                } else {
+                    console.log('❌ Dossier dist/assets/images non accessible');
+                }
+            })
+            .catch(error => {
+                console.log('❌ Erreur d\'accès au dossier dist:', error);
+            });
+    </script>
+</body>
+</html>
