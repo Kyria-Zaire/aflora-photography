@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build && node copy-images.js",
     "preview": "vite preview",
     "test:unit": "vitest",
     "prepare": "cypress install",
     "test:e2e": "playwright test",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-    "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
