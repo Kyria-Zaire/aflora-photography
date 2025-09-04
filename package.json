@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "build-only": "vite build && node copy-images.js",
+    "build-only": "vite build",
+    "build-with-images": "vite build && node copy-images.js",
     "preview": "vite preview",
     "test:unit": "vitest",
     "prepare": "cypress install",
