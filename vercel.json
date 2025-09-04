@@ -31,8 +31,8 @@
       "destination": "/sw.js"
     },
     {
-      "source": "/workbox-*.js",
-      "destination": "/workbox-*.js"
+      "source": "/workbox-:hash.js",
+      "destination": "/workbox-:hash.js"
     },
     {
       "source": "/registerSW.js",
